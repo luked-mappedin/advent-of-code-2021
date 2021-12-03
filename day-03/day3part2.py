@@ -32,8 +32,7 @@ def check_binary(number):
     return False
 
 
-def filter_list(list, pos):
-    newlist = []
+def filter_list(list, pos, newlist):
     #for x in list:
     if list[pos] == "1":
         newlist.append(x)
@@ -59,10 +58,10 @@ for x in inputs:
 for pos ,y in enumerate(masterlist):    
     if mode(y) == "1":
         for x in inputs:
-            o2 = filter_list(inputs, pos)
+            o2 = filter_list(inputs, pos, o2)
     else:
         for x in inputs:
-            co2 = filter_list(inputs, pos)
+            co2 = filter_list(inputs, pos, co2)
 
 print(co2)
 print(o2)
