@@ -31,15 +31,20 @@ def check_binary(number):
         return True
     return False
 
+def filter_list(list, pos, mod):
+    for x in list:
+        if list[pos] == "1":
+            newlist.append(x)
+            return newlist
+        elif list[pos] == "0":
+            newlist.append(list)
+            return newlist
 
-def filter_list(list, pos, newlist):
-    #for x in list:
-    if list[pos] == "1":
-        newlist.append(x)
-        return newlist
-    elif list[pos] == "0":
-        newlist.append(list)
-        return newlist
+def filter_o2(inputlist, newlist, target):
+    for x in inputlist:
+        if x == target:
+            newlist.append(x)
+            return newlist
 
 for x in inputs:    
     binlist1.append(x[0])
@@ -55,6 +60,17 @@ for x in inputs:
     binlist11.append(x[10])
     binlist12.append(x[11])
     
+def oxygen(input):
+    lst = input
+    loop_index = 0
+    while len(lst) > 1:
+        lst = filter_list(lst, loop_index,  )
+        loop_index += 1
+
+def find_mode(list, pos):
+    for x in list:
+            
+
 for pos ,y in enumerate(masterlist):    
     if mode(y) == "1":
         for x in inputs:
